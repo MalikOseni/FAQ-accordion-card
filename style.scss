@@ -1,0 +1,147 @@
+@import "reset.scss";
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap');
+:root{
+    --bgp:hsl(273, 75%, 66%);
+    --bgs:hsl(240, 73%, 65%);
+    --prytext1:hsl(238, 29%, 16%);
+    --prytext2:hsl(14, 88%, 65%);
+    --neutext1:hsl(237, 12%, 33%);
+    --neutext2:hsl(240, 6%, 50%);
+    --divider:hsl(240, 5%, 91%);
+}
+body{
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    font-family: 'Kumbh Sans', sans-serif;
+    background: linear-gradient(var(--bgp),var(--bgs));
+}
+.main{
+    width: 61%;
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+.faq{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-right: 5%;
+  width: 50%;
+}
+.text{
+    border-bottom: 1px solid var(--divider);
+    font-size: 12px !important;
+}
+.problem{
+   display: flex;
+  justify-content: space-between;
+  margin-top: 10%;
+  margin-bottom: 2%;
+}
+button{
+    outline: none;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.image{
+    width: 50%;
+    padding-bottom: 5px;
+    position: relative;
+}
+.image-one{
+    width: 100%;
+    height: 100%;
+    background: url(./images/illustration-woman-online-desktop.svg) center / contain no-repeat;
+    background-position-x: -61px;
+    background-position-y: 64px;
+    z-index: 100;
+    position: absolute;
+}
+.image-one img {
+    position: absolute;
+    top: 193px;
+    left: -23%;
+}
+.image-two {
+    width: 120%;
+    height: 114%;
+    background: url(./images/bg-pattern-desktop.svg) center/cover no-repeat;
+    background-position-x: -146px;
+    background-position-y: -12px;
+    z-index: 1;
+    position: absolute;
+}
+.image-two img,
+.image-three img{
+display: none;
+}
+.answer{
+    display: none;
+}
+ p{
+    padding-bottom: 2%;
+    transition: all .3s ease;
+}
+.bold{
+    font-weight: bolder;
+    color: var(--prytext1);
+}
+button:hover{
+    color: var(--prytext2);
+}
+.imgArrow{
+    transform: rotate(180deg);
+    transition: all .3s ease;
+}
+
+@media screen and (max-width:500px) {
+    .main{
+        flex-direction: column;
+        width: 91%;
+        margin: 25% auto 2%;
+    }
+    .image-one{
+        display: none;
+    }
+    .image-one img{
+        display: none;
+    }
+    .title{
+        text-align: center;
+    }
+    .faq{
+        width: 87%;
+    margin: 31% auto 7% auto;
+    }
+    .problem{
+        width: 100%;
+    }
+    .image-two img,
+.image-three img{
+    margin-top: 4%;
+    align-content: center;
+display: inline-block;
+width: 221px;
+}
+.image-two img {
+    position: absolute;
+    top: -107px;
+    right: -36%;
+}
+.image-three img {
+    position: absolute;
+    right: -66%;
+}
+}
